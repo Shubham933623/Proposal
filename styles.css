@@ -1,0 +1,303 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://i.postimg.cc/Z51m91nZ/bg3.jpg') 
+                center / cover no-repeat fixed;
+    font: 1em/1.618 Inter, sans-serif;
+}
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    max-width: 500px;
+    height: 200px;
+    padding: 35px;
+    font-size: 15px;
+    color: #4e4e4e;
+    border: 1px solid rgba(225, 225, 225, 0.6);
+    border-radius: 30px; /* Adjust the value to change the roundness */
+    overflow: hidden; /* Clip the blur effect */
+}
+
+/* Pseudo-element for blurred background */
+form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(225, 225, 225, 0.6);
+    filter: blur(10px); /* Adjust the value to change the blur */
+    z-index: -1; /* Place it behind the form */
+}
+
+/* Give padding to move content inside the blurred background */
+form > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Form styling */
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+/* Adjust h2 and h3 colors */
+h2, h3 {
+    color: #070707; /* Darker color */
+}
+
+/* Button styling */
+input[type="submit"] {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px; /* Adjust the value to change the roundness */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#yes {
+    background-color: rgb(42, 160, 42);
+    color: rgb(255, 255, 255);
+    width: 100px; 
+    height: 50px; 
+    border-radius: 50px;
+}
+
+
+#no {
+    background-color: rgb(224, 35, 35);
+    color: white;
+    width: 100px; 
+    height: 50px;
+    border-radius: 50px;
+}
+@media only screen and (max-width: 1786px){
+    form {
+        width: 90%;
+        height: 250px; 
+        margin-top: 25\00px;
+    }
+    
+    /* .buttons {
+        flex-direction: column;
+
+    } */
+    
+    #yes, #no {
+        width: 200px; 
+        margin-top: 50px;
+    }
+}
+@media only screen and (max-width: 567px){
+    form {
+        width: 90%;
+        height: 300px; 
+        margin-top: 350px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        /* height: 20px;
+        width: 40px; */
+
+    }
+    
+    #yes {
+        background-color: rgb(97, 186, 53);
+        color: white;
+        width: 300px; /* Increased width */
+        height: 50px;
+        border-radius: 50px;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        font-size: 20px;
+        gap: 1px;
+    }
+    
+    #no {
+        background-color: rgb(224, 35, 35);
+        color: white;
+        width: 300px; /* Increased width */
+        height: 50px;
+        border-radius: 50px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        font-size: 20px;
+        gap: 1px;
+    }
+    
+    h2 {
+        font-size: 25px; 
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 22px; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 552px){
+    form {
+        width: 90%;
+        height: 350px; 
+        margin-top: 150px;
+    }
+    h2 {
+        font-size: 24px; 
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 22px; 
+    }
+}
+@media only screen and (max-width: 552px) {
+    form h2 {
+        font-size: 23px; 
+        font-weight: bold;
+    }
+}
+@media only screen and (max-width: 515px) {
+    form h2 {
+        font-size: 22px; 
+        font-weight: bold;
+    }
+}
+@media only screen and (max-width: 496px) {
+    form h2 {
+        font-size: 20px; 
+        font-weight: bold;
+    }
+}
+@media only screen and (max-width: 461px) {
+    form h2 {
+        font-size: 17px; 
+        font-weight: bold;
+    }
+}
+@media only screen and (max-width: 296px) {
+    form {
+        width: 90%;
+        height: 300px; 
+        margin-top: 300px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        /* height: 20px;
+        width: 40px; */
+
+    }
+    
+    #yes {
+        background-color: rgb(97, 186, 53);
+        color: white;
+        width: 200px; /* Increased width */
+        height: 40px;
+        border-radius: 50px;
+        margin-top: 0px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        font-size: 20px;
+        gap: 1px;
+    }
+    
+    #no {
+        background-color: rgb(224, 35, 35);
+        color: white;
+        width: 200px; /* Increased width */
+        height: 40px;
+        border-radius: 50px;
+        margin-top: 10px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        font-size: 20px;
+        gap: 1px;
+    }
+    
+    h2 {
+        font-size: 25px; 
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 18px; 
+    }
+  
+}@media only screen and (max-width: 256px) {
+    form {
+        width: 90%;
+        height: 300px; 
+        margin-top: 200px;
+    }
+    #yes {
+        background-color: rgb(97, 186, 53);
+        color: white;
+        width: 200px; /* Increased width */
+        height: 40px;
+        border-radius: 50px;
+        margin-top: 0px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        font-size: 20px;
+        gap: 1px;
+    }
+    #no {
+        background-color: rgb(224, 35, 35);
+        color: white;
+        width: 200px; /* Increased width */
+        height: 40px;
+        border-radius: 50px;
+        margin-top: 10px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        font-size: 20px;
+        gap: 1px;
+    }
+    
+    h2 {
+        font-size: 18px; 
+        font-weight: bold;
+        margin-top: -10px;
+    }
+    h3 {
+        font-size: 16px;
+        margin-top: -10px; 
+    }
+}

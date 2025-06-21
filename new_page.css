@@ -1,0 +1,127 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background: rgb(255, 240, 180);
+    background: -moz-linear-gradient(121deg, rgba(255, 240, 180, 1) 20%, rgba(255, 210, 209, 1) 56%, rgba(255, 182, 236, 1) 100%);
+    background: -webkit-linear-gradient(121deg, rgba(255, 240, 180, 1) 20%, rgba(255, 210, 209, 1) 56%, rgba(255, 182, 236, 1) 100%);
+    background: linear-gradient(121deg, rgba(255, 240, 180, 1) 20%, rgba(255, 210, 209, 1) 56%, rgba(255, 182, 236, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff0b4", endColorstr="#ffb6ec", GradientType=1);
+    position: relative;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px; /* Add margin to create space between items */
+}
+
+.image {
+    width: 100%;
+    max-width: 1000px;
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 30px; /* Add margin to create space below each image */
+}
+
+.paragraph {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px; /* Increase padding for more space inside paragraphs */
+    background: rgb(255, 240, 180);
+    background: -moz-linear-gradient(121deg, rgba(255, 240, 180, 1) 20%, rgba(255, 210, 209, 1) 56%, rgba(255, 182, 236, 1) 100%);
+    background: -webkit-linear-gradient(121deg, rgba(255, 240, 180, 1) 20%, rgba(255, 210, 209, 1) 56%, rgba(255, 182, 236, 1) 100%);
+    background: linear-gradient(121deg, rgba(255, 240, 180, 1) 20%, rgba(255, 210, 209, 1) 56%, rgba(255, 182, 236, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff0b4", endColorstr="#ffb6ec", GradientType=1);
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: right;
+    margin-bottom: 30px; /* Add margin to create space below each paragraph */
+}
+
+.item:nth-child(even) .image {
+    align-self: flex-end;
+}
+
+.item:nth-child(even) .paragraph {
+    text-align: right;
+}
+
+.item:nth-child(odd) .image {
+    align-self: flex-start;
+}
+
+.item:nth-child(odd) .paragraph {
+    text-align: left;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        black 0,
+        black 20px,
+        transparent 20px,
+        transparent 40px
+    );
+    z-index: -1;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .image {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 992px) {
+    .image {
+        max-width: 600px;
+    }
+
+    .paragraph {
+        max-width: 500px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .image {
+        max-width: 100%;
+    }
+
+    .paragraph {
+        max-width: 90%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .paragraph {
+        max-width: 100%;
+        text-align: center;
+    }
+}
